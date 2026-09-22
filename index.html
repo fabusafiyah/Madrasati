@@ -48,34 +48,40 @@ footer{border-top:1px solid var(--line);padding:24px 16px;text-align:center;colo
 <header><div class="wrap">
 <div class="brand"><span class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></span>منظومة إتقان</div>
 <h1>نموذج أولي لنظام إدارة المدارس</h1>
-<p class="lead">إدارة المستخدمين والصفوف والجداول والحضور، مع تعيين تلقائي للمعلم البديل من المعلمين الفارغين، وتسجيل الحضور والانصراف بمجرد بدء الحصة.</p>
+<p class="lead">نظام للتحقق المكاني والزمني من حضور المعلمين بتحديد الموقع الداخلي: من حضر؟ أين كان؟ ومتى وصل؟ مع الجداول والمناوبات، وتنبيهات قبل كل حصة بصورة الموقع، وبديل تلقائي للمعلم الغائب.</p>
 <div class="cta"><a class="btn p" href="dashboard.html">ابدأ الجولة من لوحة القيادة</a><a class="btn s" href="how-it-works.html">كيف يعمل التعيين التلقائي؟</a></div>
 <div class="feats">
 <div class="feat"><b>أدوار وصلاحيات</b>مدير، وكيل، مشرف، معلم، مرشد، إداري، طالب، ولي أمر</div>
 <div class="feat"><b>بديل تلقائي</b>حسب التخصص والفراغ وعدالة توزيع الاحتياط</div>
-<div class="feat"><b>حضور بضغطة</b>«بدء الحصة» يسجّل حضور المعلم والطلاب</div>
-<div class="feat"><b>تنبيهات فورية</b>للوكيل والبديل وأولياء أمور الغائبين</div>
+<div class="feat"><b>رصد داخلي</b>BLE و Wi-Fi يسجّلان دخول المعلم وخروجه من القاعة، بدون باركود</div>
+<div class="feat"><b>تنبيه بصورة الموقع</b>قبل الحصة أو المناوبة بـ 5 دقائق، مع رقم البلوك</div><div class="feat"><b>تقرير يومي Excel</b>كل حصة ومناوبة، مع تمييز المعلمين المخالفين</div>
 </div>
 </div></header>
 <main><div class="wrap"><section><h2>شاشات الإدارة</h2><div class="grid"><a class="card" href="dashboard.html">
 <div class="thumb" style="height:240px"><iframe src="dashboard.html" title="لوحة القيادة" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>لوحة القيادة</h3></div><p>مؤشرات اليوم، الحصص الجارية، البدلاء، والطلبات المعلّقة</p></div></a><a class="card" href="users.html">
+<div class="meta"><div class="row"><h3>لوحة القيادة</h3></div><p>الحصص الجارية، المناوبات الآن، المخالفات والطلبات</p></div></a><a class="card" href="users.html">
 <div class="thumb" style="height:240px"><iframe src="users.html" title="المستخدمون والصلاحيات" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>المستخدمون والصلاحيات</h3></div><p>8 أدوار ومصفوفة صلاحيات لكل دور ونطاق</p></div></a><a class="card" href="classes.html">
+<div class="meta"><div class="row"><h3>المستخدمون والصلاحيات</h3></div><p>حسابات المعلمين: ينشئها المدير أو تسجيل ذاتي باعتماده</p></div></a><a class="card" href="classes.html">
 <div class="thumb" style="height:240px"><iframe src="classes.html" title="الصفوف والشعب" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>الصفوف والشعب</h3></div><p>المراحل والشعب والكثافة والقاعات ورائد الفصل</p></div></a><a class="card" href="timetable.html">
+<div class="meta"><div class="row"><h3>الصفوف والشعب</h3></div><p>المراحل والشعب والكثافة والقاعات</p></div></a><a class="card" href="timetable.html">
 <div class="thumb" style="height:240px"><iframe src="timetable.html" title="الجداول والحصص" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>الجداول والحصص</h3></div><p>الجدول الأسبوعي والجرس والأنصبة وفحص التعارضات</p></div></a></div></section><section><h2>التشغيل اليومي</h2><div class="grid"><a class="card" href="attendance.html">
+<div class="meta"><div class="row"><h3>الجداول والحصص</h3></div><p>التعديل للمدير فقط · قفل قبل 10 دقائق</p></div></a><a class="card" href="duties.html">
+<div class="thumb" style="height:240px"><iframe src="duties.html" title="المناوبات" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
+<div class="meta"><div class="row"><h3>المناوبات</h3></div><p>مواقع المناوبات مع صورها ورصد تواجد المعلم</p></div></a></div></section><section><h2>التشغيل اليومي</h2><div class="grid"><a class="card" href="attendance.html">
 <div class="thumb" style="height:240px"><iframe src="attendance.html" title="الحضور والانصراف" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>الحضور والانصراف</h3></div><p>حضور المعلمين والطلاب وطلبات الإجازة والاستئذان</p></div></a><a class="card" href="substitution.html">
+<div class="meta"><div class="row"><h3>الحضور والانصراف</h3></div><p>رصد داخلي عبر BLE و Wi-Fi بدون باركود</p></div></a><a class="card" href="substitution.html">
 <div class="thumb" style="height:240px"><iframe src="substitution.html" title="الغياب والبدلاء التلقائي" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
 <div class="meta"><div class="row"><h3>الغياب والبدلاء التلقائي</h3><span class="tag">تفاعلي</span></div><p>جرّب «تعيين تلقائي الآن» للحصة الشاغرة</p></div></a><a class="card" href="live-session.html">
 <div class="thumb" style="height:240px"><iframe src="live-session.html" title="الحصة المباشرة" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>الحصة المباشرة</h3><span class="tag">تفاعلي</span></div><p>جرّب «بدء الحصة»: يُسجَّل الحضور تلقائياً</p></div></a><a class="card" href="how-it-works.html">
+<div class="meta"><div class="row"><h3>الحصة المباشرة</h3><span class="tag">تفاعلي</span></div><p>جرّب «بدء الحصة»: يُسجَّل الحضور تلقائياً</p></div></a><a class="card" href="daily-report.html">
+<div class="thumb" style="height:240px"><iframe src="daily-report.html" title="التقرير اليومي والمخالفات" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
+<div class="meta"><div class="row"><h3>التقرير اليومي والمخالفات</h3></div><p>من حضر؟ أين كان؟ متى وصل؟ مع تصدير Excel</p></div></a><a class="card" href="how-it-works.html">
 <div class="thumb" style="height:240px"><iframe src="how-it-works.html" title="آلية العمل" loading="lazy" tabindex="-1" scrolling="no" style="width:1440px;height:960px;transform:scale(0.25)"></iframe></div>
-<div class="meta"><div class="row"><h3>آلية العمل</h3></div><p>مخطط التعيين التلقائي وتسجيل الحضور عند بدء الحصة</p></div></a></div></section><section><h2>تطبيق المعلم (جوال)</h2><div class="grid gm"><a class="card m" href="teacher-app.html">
+<div class="meta"><div class="row"><h3>آلية العمل</h3></div><p>البديل التلقائي، رصد الحضور، وتعديلات الإدارة</p></div></a></div></section><section><h2>تطبيق المعلم (جوال)</h2><div class="grid gm"><a class="card m" href="teacher-app.html">
 <div class="thumb" style="height:354px"><iframe src="teacher-app.html" title="بدء الحصة" loading="lazy" tabindex="-1" scrolling="no" style="width:390px;height:844px;transform:scale(0.42)"></iframe></div>
-<div class="meta"><div class="row"><h3>بدء الحصة</h3><span class="tag">تفاعلي</span></div><p>زر واحد يسجّل حضور المعلم والطلاب</p></div></a><a class="card m" href="substitute-notice.html">
+<div class="meta"><div class="row"><h3>بدء الحصة</h3><span class="tag">تفاعلي</span></div><p>رصد الدخول للقاعة تلقائياً</p></div></a><a class="card m" href="teacher-alerts.html">
+<div class="thumb" style="height:354px"><iframe src="teacher-alerts.html" title="التنبيهات وصور المواقع" loading="lazy" tabindex="-1" scrolling="no" style="width:390px;height:844px;transform:scale(0.42)"></iframe></div>
+<div class="meta"><div class="row"><h3>التنبيهات وصور المواقع</h3><span class="tag">تفاعلي</span></div><p>تنبيه قبل 5 دقائق مع صورة الباب ورقم البلوك</p></div></a><a class="card m" href="substitute-notice.html">
 <div class="thumb" style="height:354px"><iframe src="substitute-notice.html" title="إشعار تكليف احتياط" loading="lazy" tabindex="-1" scrolling="no" style="width:390px;height:844px;transform:scale(0.42)"></iframe></div>
 <div class="meta"><div class="row"><h3>إشعار تكليف احتياط</h3><span class="tag">تفاعلي</span></div><p>قبول أو اعتذار مع مهلة للرد</p></div></a></div></section></div></main>
 <footer>نموذج أولي للعرض — الأسماء والأرقام بيانات تجريبية.</footer>
