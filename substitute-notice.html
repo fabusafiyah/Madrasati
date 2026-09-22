@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تكليف احتياط — إشعار البديل · منظومة إتقان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC}
+a{color:#1D4ED8}a:hover{color:#1E40AF}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #2563EB;outline-offset:2px}
+</style>
+<style>body{background:#E2E8F0}#dc-root{display:flex;justify-content:center;padding:24px 0 80px}</style>
+<script src="runtime.js"></script>
+</head>
+<body data-w="420">
+<div id="dc-root"></div>
+<template id="dc-template">
+<div dir="rtl" style="width: 390px; height: 844px; display: flex; flex-direction: column; background: #F8FAFC; overflow: hidden; font-family: 'Noto Sans Arabic', 'Noto Sans', system-ui, sans-serif; color: #0F172A; font-variant-numeric: tabular-nums;">
+<div style="flex-grow: 1; overflow: hidden; padding: 20px 16px 16px; display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between;"><h1 style="margin: 0; font-size: 22px; font-weight: 800;">الإشعارات</h1><span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: #FEF2F2; color: #B91C1C; font-size: 12px; font-weight: 600; white-space: nowrap; line-height: 18px;">1 جديد</span></div>
+<section style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 10px 24px -14px rgba(15,23,42,0.25);">
+<div style="display: flex; align-items: center; gap: 12px;"><div style="width: 48px; height: 48px; border-radius: 14px; background: #FFFBEB; color: #B45309; display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="m17 2 4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="m7 22-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg></div><div style="display: flex; flex-direction: column;"><span style="font-size: 17px; font-weight: 800;">تكليف حصة احتياط</span><span style="font-size: 12px; color: #64748B;">اختيار تلقائي · قبل دقيقة</span></div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+<div style="background: #F8FAFC; border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column;"><span style="font-size: 11px; color: #64748B;">الحصة</span><span style="font-size: 14px; font-weight: 800;">الخامسة · 10:35</span></div>
+<div style="background: #F8FAFC; border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column;"><span style="font-size: 11px; color: #64748B;">الشعبة</span><span style="font-size: 14px; font-weight: 800;">1/أ متوسط</span></div>
+<div style="background: #F8FAFC; border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column;"><span style="font-size: 11px; color: #64748B;">المادة</span><span style="font-size: 14px; font-weight: 800;">لغة إنجليزية</span></div>
+<div style="background: #F8FAFC; border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column;"><span style="font-size: 11px; color: #64748B;">القاعة</span><span style="font-size: 14px; font-weight: 800;">قاعة 201</span></div>
+</div>
+<span style="font-size: 13px; color: #334155; line-height: 21px;">بدلاً من <b>أ. منصور الزهراني</b> (مهمة رسمية). اختارك النظام لأنك فارغ في هذه الحصة، واحتياطك هذا الأسبوع 0 من 4، وفي نفس المبنى.</span>
+<sc-if value="{{pending}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 12px; background: #FFFBEB; color: #92400E; font-size: 13px; font-weight: 700;"><span style="display: inline-flex; align-items: center; gap: 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2 2M9 2h6"></path></svg> مهلة الرد</span><span style="font-size: 16px;">04:32</span></div>
+<div style="display: flex; gap: 8px;"><button type="button" onClick="{{accept}}" style="flex: 2 1 0; height: 52px; border-radius: 14px; border: 0; background: #2563EB; color: #FFFFFF; font-size: 16px; font-weight: 800;">قبول التكليف</button><button type="button" onClick="{{decline}}" style="flex: 1 1 0; height: 52px; border-radius: 14px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #B91C1C; font-size: 15px; font-weight: 800;">اعتذار</button></div>
+<span style="font-size: 11px; color: #64748B; text-align: center;">إن لم ترد خلال المهلة يُحوَّل التكليف للمرشح التالي تلقائياً</span>
+</sc-if>
+<sc-if value="{{accepted}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; background: #ECFDF5; border: 1px solid #A7F3D0;"><span style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800; color: #047857;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> تم القبول وأُضيفت الحصة لجدولك</span><span style="font-size: 12px; color: #065F46; line-height: 19px;">ستصلك تذكرة قبل 5 دقائق. عند ضغط «بدء الحصة» يُسجَّل حضورك وحضور الطلاب تلقائياً.</span></div>
+<a href="teacher-app.html" style="height: 48px; border-radius: 12px; background: #0F172A; color: #FFFFFF; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center; text-decoration: none;">عرض خطة الدرس المرفقة</a>
+</sc-if>
+<sc-if value="{{declined}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border-radius: 14px; background: #F1F5F9;"><span style="font-size: 15px; font-weight: 800; color: #334155;">تم تسجيل اعتذارك</span><span style="font-size: 12px; color: #475569;">حُوّل التكليف تلقائياً إلى أ. عمر الشهري (71%) وأُبلغ الوكيل.</span></div>
+<button type="button" onClick="{{undo}}" style="height: 44px; border-radius: 12px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #334155; font-size: 14px; font-weight: 700;">تراجع</button>
+</sc-if>
+</section>
+<section style="display: flex; flex-direction: column; gap: 8px;">
+<span style="font-size: 13px; font-weight: 800; color: #475569;">سابقاً</span>
+<div style="display: flex; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px;"><div style="width: 36px; height: 36px; border-radius: 12px; background: #ECFDF5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="m16 11 2 2 4-4"></path></svg></div><div style="display: flex; flex-direction: column;"><span style="font-size: 13px; font-weight: 700;">تم تسجيل حضورك 06:58</span><span style="font-size: 12px; color: #64748B;">تطبيق · نطاق جغرافي</span></div></div>
+<div style="display: flex; gap: 12px; padding: 12px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px;"><div style="width: 36px; height: 36px; border-radius: 12px; background: #EFF4FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div><div style="display: flex; flex-direction: column;"><span style="font-size: 13px; font-weight: 700;">تحديث الجدول: الأربعاء الحصة 5</span><span style="font-size: 12px; color: #64748B;">نُقلت إلى معمل الحاسب 1 لحل تعارض</span></div></div>
+</section>
+</div>
+<nav aria-label="التنقل" style="display: flex; padding: 6px 8px 14px; background: #FFFFFF; border-top: 1px solid #E2E8F0; flex-shrink: 0;"><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg><span>الرئيسية</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg><span>جدولي</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>طلابي</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #2563EB;" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span>الإشعارات</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg><span>حسابي</span></button></nav>
+</div>
+</template>
+<a href="./" class="portal-back" style="position:fixed;bottom:18px;left:18px;z-index:50;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:999px;background:#0F172A;color:#fff;font:700 14px 'Noto Sans Arabic',system-ui,sans-serif;text-decoration:none;box-shadow:0 10px 24px -8px rgba(15,23,42,.5)">كل الشاشات ←</a>
+<script>
+class Component extends DCLogic {
+renderVals() {
+const st = this.state || {};
+const r = st.reply || null;
+return {
+pending: !r, accepted: r === 'yes', declined: r === 'no',
+accept: () => this.setState({ reply: 'yes' }),
+decline: () => this.setState({ reply: 'no' }),
+undo: () => this.setState({ reply: null })
+};
+}
+}
+window.Component = Component;
+</script>
+</body>
+</html>

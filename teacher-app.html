@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تطبيق المعلم — بدء الحصة · منظومة إتقان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC}
+a{color:#1D4ED8}a:hover{color:#1E40AF}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #2563EB;outline-offset:2px}
+</style>
+<style>body{background:#E2E8F0}#dc-root{display:flex;justify-content:center;padding:24px 0 80px}</style>
+<script src="runtime.js"></script>
+</head>
+<body data-w="420">
+<div id="dc-root"></div>
+<template id="dc-template">
+<div dir="rtl" style="width: 390px; height: 844px; display: flex; flex-direction: column; background: #F8FAFC; overflow: hidden; font-family: 'Noto Sans Arabic', 'Noto Sans', system-ui, sans-serif; color: #0F172A; font-variant-numeric: tabular-nums;">
+<div style="flex-grow: 1; overflow: hidden; padding: 20px 16px 16px; display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<div style="display: flex; align-items: center; gap: 10px;"><div style="width: 44px; height: 44px; border-radius: 999px; background: #ECFDF5; color: #047857; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; ">فس</div><div style="display: flex; flex-direction: column;"><span style="font-size: 12px; color: #64748B;">الثلاثاء 22 سبتمبر</span><span style="font-size: 17px; font-weight: 800;">صباح الخير، أ. فيصل</span></div></div>
+<button type="button" aria-label="الإشعارات" style="width: 44px; height: 44px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; color: #334155;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; background: #ECFDF5; border: 1px solid #A7F3D0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #047857;">حضورك مسجّل 06:58</span><span style="font-size: 12px; color: #065F46;">تطبيق · داخل نطاق المدرسة</span></div></div>
+<section style="background: #0F172A; color: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 13px; font-weight: 700; color: #BFDBFE;">الحصة الرابعة · 09:50 – 10:35</span><span style="display: inline-flex; padding: 3px 10px; border-radius: 999px; background: #FEF3C7; color: #92400E; font-size: 11px; font-weight: 700;">احتياط</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 22px; font-weight: 800;">فيزياء 2 · شعبة 2/أ</span><span style="font-size: 13px; color: #CBD5E1;">قاعة 102 · بدلاً من أ. وليد الحربي · خطة الدرس مرفقة</span></div>
+<sc-if value="{{notStarted}}" hint-placeholder-val="{{true}}">
+<button type="button" onClick="{{start}}" style="height: 56px; border-radius: 14px; border: 0; background: #10B981; color: #04241A; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#04241A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M6 3l14 9-14 9z"></path></svg> بدء الحصة</button>
+<span style="font-size: 12px; color: #CBD5E1; text-align: center;">سيُسجَّل حضورك وحضور الطلاب تلقائياً</span>
+</sc-if>
+<sc-if value="{{started}}" hint-placeholder-val="{{false}}">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+<div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px; display: flex; flex-direction: column;"><span style="font-size: 20px; font-weight: 800; color: #6EE7B7;">31</span><span style="font-size: 11px; color: #CBD5E1;">حاضر</span></div>
+<div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px; display: flex; flex-direction: column;"><span style="font-size: 20px; font-weight: 800; color: #FCA5A5;">2</span><span style="font-size: 11px; color: #CBD5E1;">غائب</span></div>
+<div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px; display: flex; flex-direction: column;"><span style="font-size: 20px; font-weight: 800; color: #FCD34D;">1</span><span style="font-size: 11px; color: #CBD5E1;">مستأذن</span></div>
+</div>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6EE7B7; font-weight: 700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> بدأت {{startTime}} · حضورك والكشف سُجّلا تلقائياً</span>
+<div style="display: flex; gap: 8px;"><a href="live-session.html" style="flex-grow: 1; height: 48px; border-radius: 12px; background: #FFFFFF; color: #0F172A; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center; text-decoration: none;">كشف الحضور</a><button type="button" onClick="{{reset}}" style="flex-grow: 1; height: 48px; border-radius: 12px; border: 0; background: #DC2626; color: #FFFFFF; font-size: 14px; font-weight: 800;">إنهاء الحصة</button></div>
+</sc-if>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 6px 14px; display: flex; flex-direction: column;">
+<span style="font-size: 14px; font-weight: 800; padding: 8px 0 4px;">بقية جدول اليوم</span>
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F1F5F9;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #334155;">1</span><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #94A3B8;">فراغ </span><span style="font-size: 12px; color: #64748B;">07:15</span></div><span style="font-size: 12px; font-weight: 700; color: #64748B;">—</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F1F5F9;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #334155;">2</span><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #0F172A;">فيزياء · 1/أ <span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: #FFFBEB; color: #B45309; font-size: 10px; font-weight: 600; white-space: nowrap; line-height: 18px;">احتياط</span></span><span style="font-size: 12px; color: #64748B;">08:00</span></div><span style="font-size: 12px; font-weight: 700; color: #64748B;">تمت</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F1F5F9;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #334155;">3</span><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #0F172A;">فيزياء · 3/ب </span><span style="font-size: 12px; color: #64748B;">08:45</span></div><span style="font-size: 12px; font-weight: 700; color: #64748B;">تمت</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F1F5F9;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #334155;">5</span><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #94A3B8;">فراغ </span><span style="font-size: 12px; color: #64748B;">10:35</span></div><span style="font-size: 12px; font-weight: 700; color: #64748B;">—</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F1F5F9;"><span style="width: 30px; height: 30px; border-radius: 8px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #334155;">6</span><div style="display: flex; flex-direction: column; flex-grow: 1;"><span style="font-size: 14px; font-weight: 700; color: #0F172A;">فيزياء · 2/ب </span><span style="font-size: 12px; color: #64748B;">11:40</span></div><span style="font-size: 12px; font-weight: 700; color: #64748B;">قادمة</span></div>
+</section>
+</div>
+<nav aria-label="التنقل" style="display: flex; padding: 6px 8px 14px; background: #FFFFFF; border-top: 1px solid #E2E8F0; flex-shrink: 0;"><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #2563EB;" aria-current="page"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg><span>الرئيسية</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg><span>جدولي</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>طلابي</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span>الإشعارات</span></button><button type="button" style="flex: 1 1 0; height: 56px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; color: #64748B;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="8" r="4"></circle><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"></path></svg><span>حسابي</span></button></nav>
+</div>
+</template>
+<a href="./" class="portal-back" style="position:fixed;bottom:18px;left:18px;z-index:50;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:999px;background:#0F172A;color:#fff;font:700 14px 'Noto Sans Arabic',system-ui,sans-serif;text-decoration:none;box-shadow:0 10px 24px -8px rgba(15,23,42,.5)">كل الشاشات ←</a>
+<script>
+class Component extends DCLogic {
+renderVals() {
+const st = this.state || {};
+const pad = (n) => (n < 10 ? '0' : '') + n;
+const d = st.startedAt ? new Date(st.startedAt) : null;
+return {
+started: !!st.startedAt, notStarted: !st.startedAt,
+startTime: d ? pad(d.getHours()) + ':' + pad(d.getMinutes()) : '',
+start: () => this.setState({ startedAt: Date.now() }),
+reset: () => this.setState({ startedAt: null })
+};
+}
+}
+window.Component = Component;
+</script>
+</body>
+</html>
